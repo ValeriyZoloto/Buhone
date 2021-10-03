@@ -16,6 +16,7 @@ body {
   position: fixed;
   overflow-y: scroll;
   @extend %lato-300;
+  background-color: $bg;
 }
 
 a {
