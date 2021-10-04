@@ -1,0 +1,37 @@
+.our-services {
+  padding: 140px 0;
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 102px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__link {
+    padding: 200px 45px 45px 45px;
+    display: block;
+    width: 350px;
+    height: 360px;
+    background-image: url(../images/our-services/our-services.jpg);
+    @extend %bg-center-contain;
+
+
+    &:hover {
+      background-image: url(../images/our-services/our-services-active.jpg);
+    }
+  }
+
+  &__card-title {
+    max-width: 100%;
+    color: $white;
+    @extend %lato-900;
+    font-size: 24px;
+    line-height: 1.25;
+    @include overflow(4);
+  }
+}

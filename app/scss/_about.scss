@@ -1,0 +1,79 @@
+.about {
+  padding: 160px 0px 140px;
+  background-color: $white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 445px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include overflow(1);
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 60px;
+    @include overflow(1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__card {
+    padding: 30px 84px 40px 40px;
+    width: 255px;
+    height: 255px;
+    background-color: $bg;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent;
+      color: $white;
+    }
+
+    &:hover a {
+      color: $white;
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  &__num {
+    margin-bottom: 30px;
+    @extend %lato-900;
+    font-size: 55px;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include overflow(1);
+  }
+
+  &__name {
+    @extend %lato-700;
+    margin-bottom: 47px;
+    font-size: 14px;
+    line-height: 1.28;
+    @include overflow(2);
+  }
+
+  &__all {
+    display: inline-block;
+    @extend %lato-700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+
+  p {
+    @include overflow(10);
+  }
+}

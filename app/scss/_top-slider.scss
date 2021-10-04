@@ -1,0 +1,96 @@
+.top-slider {
+  color: $white;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+
+  &__item {
+    min-height: 670px;
+    padding: 170px 0 113px 0;
+    @extend %bg-center-cover;
+
+    &--one {
+      background-image: url(../images/top-slider/slide/slide-1.jpg);
+    }
+
+    &--two {
+      background-image: url(../images/top-slider/slide/slide-4.jpg);
+    }
+
+    &--three {
+      background-image: url(../images/top-slider/slide/slide-1.jpg);
+    }
+
+    &--four {
+      background-image: url(../images/top-slider/slide/slide-4.jpg);
+    }
+  }
+
+  &__content {
+    max-width: 589px;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    @extend %Merriweather-700;
+    font-size: 48px;
+    line-height: 1.37;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    z-index: 1;
+    bottom: 113px;
+    padding: 14px 20px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border: 1px solid $white;
+  }
+
+  .slick-arrow {
+    z-index: 2;
+  }
+
+  .slick-prev {
+    right: 465px;
+    opacity: 0.6;
+  }
+
+  .slick-next {
+    right: 405px;
+    opacity: 0.4;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 113px;
+    display: flex;
+    left: 405px;
+
+    & li:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    & button {
+      padding: 0;
+      border: 1px solid transparent;
+      font-size: 0;
+      background-color: $white;
+      opacity: 0.4;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
+
+    .slick-active button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      background-color: $white;
+      opacity: 1;
+      font-size: 0;
+      padding: 0;
+    }
+  }
+}

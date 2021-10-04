@@ -49,19 +49,38 @@ a {
   overflow: hidden;
 }
 
+.btn {
+  padding: 17px 57px;
+  border: 2px solid transparent;
+  background-color: $accent;
+  line-height: 1.38;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+
+  &:focus {
+    border: 2px solid $title;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    padding: 16px 54px;
+    background-color: $white;
+    color: $title;
+    font-weight: 700;
+  }
+
+}
+
 .title {
-  // text-align: center;
-  // @extend %roboto-700;
-  // font-size: 48px;
-  // line-height: 1.35;
-  // color: $title;
-  // text-transform: uppercase;
+  margin-bottom: 40px;
+  @extend %lato-900;
+  color: $section-title;
+  font-size: 24px;
+  line-height: 1.37;
+}
 
-  // @include media-w($sms) {
-  //   font-size: 40px;
-  // }
-
-  // @include media-w($xxs) {
-  //   font-size: 32px;
-  // }
+.subtitle {
+  @extend %Merriweather-900;
+  font-size: 48px;
+  line-height: 1.43;
+  color: $title;
 }
