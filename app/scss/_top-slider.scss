@@ -4,7 +4,7 @@
 
   &__item {
     min-height: 670px;
-    padding: 170px 0 113px 0;
+    padding: 167px 0 113px 0;
     @extend %bg-center-cover;
 
     &--one {
@@ -29,7 +29,7 @@
   }
 
   &__title {
-    margin-bottom: 80px;
+    margin-bottom: 85px;
     @extend %Merriweather-700;
     font-size: 48px;
     line-height: 1.37;
@@ -52,20 +52,20 @@
   }
 
   .slick-prev {
-    right: 465px;
+    right: 312px;
     opacity: 0.6;
   }
 
   .slick-next {
-    right: 405px;
+    right: 254px;
     opacity: 0.4;
   }
 
   .slick-dots {
     position: absolute;
-    bottom: 113px;
+    bottom: 110px;
     display: flex;
-    left: 405px;
+    left: 247px;
 
     & li:not(:last-child) {
       margin-right: 40px;

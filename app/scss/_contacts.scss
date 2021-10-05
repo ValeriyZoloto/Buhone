@@ -1,0 +1,175 @@
+.contacts {
+  min-height: 623px;
+  padding: 120px 0px 122px 0px;
+  color: $white;
+  @extend %bg-center-cover;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 445px;
+  }
+
+  p {
+    margin-bottom: 72px;
+    @include overflow($row-2);
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @extend %Merriweather-900;
+    font-size: 48px;
+    color: $white;
+    line-height: 1.43;
+    @include overflow($row);
+  }
+
+  &__connections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tel,
+  &__mail {
+    border: 1px solid transparent;
+    position: relative;
+    @extend %bg-center-contain;
+  }
+
+  &__tel:after,
+  &__mail:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $white;
+    transition: width 0.3s ease-out;
+  }
+
+  &__tel:focus,
+  &__mail:focus {
+    font-weight: 700;
+    color: $accent;
+  }
+
+  &__tel:hover::after,
+  &__mail:hover::after {
+    width: 100%;
+  }
+
+  &__tel:active,
+  &__mail:active {
+    border: 1px solid $accent;
+    color: $accent;
+  }
+
+  &__tel {
+    padding-left: 25px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 30px;
+      left: 0;
+      top: -2px;
+      background-image: url(../images/contacts/icons/tel.svg);
+    }
+  }
+
+  &__mail {
+    padding-left: 45px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 30px;
+      left: 0;
+      top: -2px;
+      background-image: url(../images/contacts/icons/envelope.svg);
+    }
+  }
+
+  &__form {
+    padding-top: 15px;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  &__form-text {
+    display: block;
+    margin-bottom: 16px;
+    min-width: 255px;
+    @extend %lato-400;
+    font-size: 16px;
+    line-height: 1.37;
+  }
+
+  &__form-input {
+    width: 255px;
+    padding: 0px 4px 0px 2px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    font-size: 21px;
+    line-height: 1.38;
+    color: $section-title;
+  }
+
+  &__form-textarea {
+    display: block;
+    border: transparent;
+    width: 100%;
+    height: 99px;
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    resize: none;
+    margin-bottom: 50px;
+    color: $section-title;
+    padding: 5px;
+
+    &::placeholder {
+      color: $section-title;
+    }
+  }
+
+  .button {
+    padding: 17px 42px;
+    border: 2px solid transparent;
+    background-color: $accent;
+    line-height: 1.38;
+    transition: background-color 0.5s,
+      color 0.5s,
+      border 0.5s;
+    display: block;
+    margin-left: auto;
+    color: $white;
+    border: 2px solid transparent;
+    transition: 0.5s;
+
+    &:focus {
+      border: 2px solid $title;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $accent;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .about {
-  padding: 160px 0px 140px;
+  padding: 163px 0px 140px 0px;
   background-color: $white;
 
   &__inner {
@@ -8,11 +8,12 @@
   }
 
   &__content {
+    margin-top: -24px;
     max-width: 445px;
   }
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 27px;
     @include overflow(1);
   }
 
@@ -34,6 +35,7 @@
     height: 255px;
     background-color: $bg;
     cursor: pointer;
+    transition: 0.5s;
 
     &:hover {
       background-color: $accent;
@@ -47,7 +49,7 @@
   }
 
   &__num {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     @extend %lato-900;
     font-size: 55px;
     line-height: 1.2;
@@ -58,7 +60,7 @@
 
   &__name {
     @extend %lato-700;
-    margin-bottom: 47px;
+    margin-bottom: 41px;
     font-size: 14px;
     line-height: 1.28;
     @include overflow(2);
@@ -75,5 +77,6 @@
 
   p {
     @include overflow(10);
+    line-height: 1.7;
   }
 }

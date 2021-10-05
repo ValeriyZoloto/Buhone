@@ -1,9 +1,14 @@
 .our-services {
-  padding: 140px 0;
+  padding: 137px 0 140px 0;
+
+  &__title {
+    margin-bottom: 29px;
+    letter-spacing: 1px;
+  }
 
   &__subtitle {
     display: block;
-    margin-bottom: 102px;
+    margin-bottom: 85px;
   }
 
   &__list {
@@ -19,6 +24,7 @@
     height: 360px;
     background-image: url(../images/our-services/our-services.jpg);
     @extend %bg-center-contain;
+    transition: 0.5s;
 
 
     &:hover {

@@ -1,0 +1,76 @@
+.clients {
+  padding: 100px 0 204px;
+  background-color: $bg;
+
+  &__title {
+    margin-bottom: 27px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 62px;
+  }
+
+  &__logo-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    z-index: 1;
+    bottom: -103px;
+    padding: 14px 20px;
+    width: 60px;
+    height: 60px;
+    background-color: $accent;
+    border: 1px solid $white;
+  }
+
+  .slick-prev {
+    right: 61px;
+    opacity: 0.6;
+  }
+
+  .slick-next {
+    right: 3px;
+    opacity: 1;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -105px;
+    display: flex;
+
+    & li:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    & button {
+      padding: 0;
+      border: 1px solid transparent;
+      font-size: 0;
+      background-color: $accent;
+      opacity: 0.4;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
+
+    .slick-active button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      background-color: $accent;
+      opacity: 1;
+      font-size: 0;
+      padding: 0;
+    }
+  }
+}

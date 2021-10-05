@@ -1,0 +1,102 @@
+.reviews {
+  background-color: $white;
+  padding: 140px 0 250px 0;
+
+  &__title {
+    margin-bottom: 27px;
+    letter-spacing: 1px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 63px;
+  }
+
+  &__post {
+    padding: 45px 95px 40px 95px;
+    background-color: $bg;
+  }
+
+  &__text {
+    margin-bottom: 53px;
+    @include overflow($row-5);
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+    margin-right: auto;
+    padding-right: 45px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    @extend %lato-900;
+    @include overflow($row-1);
+    letter-spacing: 1px;
+  }
+
+  &__position {
+    @extend %lato-400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #4f4f4f;
+    @include overflow($row-1);
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    z-index: 1;
+    bottom: -111px;
+    padding: 14px 20px;
+    width: 60px;
+    height: 60px;
+    background-color: $accent;
+    border: 1px solid $white;
+  }
+
+  .slick-prev {
+    right: 60px;
+    opacity: 0.6;
+  }
+
+  .slick-next {
+    right: 0px;
+    opacity: 1;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -108px;
+    display: flex;
+
+    & li:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    & button {
+      padding: 0;
+      border: 1px solid transparent;
+      font-size: 0;
+      background-color: $accent;
+      opacity: 0.4;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
+
+    .slick-active button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      background-color: $accent;
+      opacity: 1;
+      font-size: 0;
+      padding: 0;
+    }
+  }
+}
