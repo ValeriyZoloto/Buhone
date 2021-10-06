@@ -7,6 +7,14 @@
     padding: 167px 0 113px 0;
     @extend %bg-center-cover;
 
+    @include media-w($mdl) {
+      min-height: 570px;
+    }
+
+    @include media-w($smx) {
+      min-height: 470px;
+    }
+
     &--one {
       background-image: url(../images/top-slider/slide/slide-1.jpg);
     }
@@ -33,6 +41,16 @@
     @extend %Merriweather-700;
     font-size: 48px;
     line-height: 1.37;
+
+    @include media-w($mdl) {
+      font-size: 38px;
+      margin-bottom: 65px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 32px;
+      margin-bottom: 45px;
+    }
   }
 
   .slick-prev,
@@ -66,6 +84,21 @@
     bottom: 110px;
     display: flex;
     left: 247px;
+
+    @include media-w($mdl) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media-w($smx) {
+      bottom: 60px;
+      left: 5%;
+      transform: translateX(0%);
+    }
+
+    @include media-w($xs) {
+      bottom: 50px;
+    }
 
     & li:not(:last-child) {
       margin-right: 40px;

@@ -16,17 +16,23 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__inner">
       <div class="logo-box">
         <a class="logo" href="#">
           <picture>
             <source srcset="images/logo/logo.webp" type="image/webp">
             <source srcset="images/logo/logo.png" type="image/png">
-            <img src="images/logo/logo.png">
+            <img src="images/logo/logo.png" alt="logo">
           </picture>
         </a>
       </div>
+
+      <button class="burger" type="button">
+        <span class="burger__span"></span>
+        <span class="sr-only">Для открытия навигационного меню </span>
+      </button>
+
       <div class="header__content">
         <div class="header__top">
           <ul class="header__top-list">
@@ -51,25 +57,25 @@
         </div>
 
         <div class="header__botom">
-          <ul class="header__botom-list">
+          <ul class="header__botom-list menu">
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">Главная</a>
+              <a class="header__botom-link" href="#header">Главная</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">услуги</a>
+              <a class="header__botom-link" href="#our-services">услуги</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">кейсы</a>
+              <a class="header__botom-link" href="#about">кейсы</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">о компании</a>
+              <a class="header__botom-link" href="#about">о компании</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">контакты</a>
+              <a class="header__botom-link" href="#contacts">контакты</a>
             </li>
           </ul>
         </div>
@@ -132,7 +138,7 @@
     </li>
   </ul>
 </section>
-<section class="our-services">
+<section class="our-services" id="our-services">
   <div class="container">
     <h2 class="our-services__title title">Наши услуги</h2>
     <span class="our-services__subtitle subtitle ">Мы специализируемся</span>
@@ -140,10 +146,10 @@
       <li class="our-services__item">
         <article class="our-services__card">
           <a class="our-services__link" href="#">
-            <div class="our-services__card-title">
+            <h4 class="our-services__card-title">
               Бухгалтерское
               обслуживание
-            </div>
+            </h4>
           </a>
         </article>
       </li>
@@ -151,10 +157,10 @@
       <li class="our-services__item">
         <article class="our-services__card">
           <a class="our-services__link" href="#">
-            <div class="our-services__card-title">
+            <h4 class="our-services__card-title">
               Учет операций по
               персоналу
-            </div>
+            </h4>
           </a>
         </article>
       </li>
@@ -162,9 +168,9 @@
       <li class="our-services__item">
         <article class="our-services__card">
           <a class="our-services__link" href="#">
-            <div class="our-services__card-title">
+            <h4 class="our-services__card-title">
               Взаимодействие с ИФНС и фондами
-            </div>
+            </h4>
           </a>
         </article>
       </li>
@@ -172,9 +178,9 @@
       <li class="our-services__item">
         <article class="our-services__card">
           <a class="our-services__link" href="#">
-            <div class="our-services__card-title">
+            <h4 class="our-services__card-title">
               Работа с программой 1С
-            </div>
+            </h4>
           </a>
         </article>
       </li>
@@ -182,9 +188,9 @@
       <li class="our-services__item">
         <article class="our-services__card">
           <a class="our-services__link" href="#">
-            <div class="our-services__card-title">
+            <h4 class="our-services__card-title">
               Подключение к системе электнонной сдачи отчетности в ИФНС
-            </div>
+            </h4>
           </a>
         </article>
       </li>
@@ -192,16 +198,16 @@
       <li class="our-services__item">
         <article class="our-services__card">
           <a class="our-services__link" href="#">
-            <div class="our-services__card-title">
+            <h4 class="our-services__card-title">
               Анализ налоговой нагрузки
-            </div>
+            </h4>
           </a>
         </article>
       </li>
     </ul>
   </div>
 </section>
-<section class="about">
+<section class="about" id="about">
   <div class="container">
     <div class="about__inner">
       <div class="about__content">
@@ -222,9 +228,9 @@
           <li class="about__item">
             <article class="about__card">
               <div class="about__num">90</div>
-              <div class="about__name">
+              <h4 class="about__name">
                 Завершено крупных сделок
-              </div>
+              </h4>
               <a class="about__all" href="#">Все кейсы</a>
             </article>
           </li>
@@ -232,9 +238,9 @@
           <li class="about__item">
             <article class="about__card">
               <div class="about__num">55</div>
-              <div class="about__name">
+              <h4 class="about__name">
                 Завершено больших проэктов
-              </div>
+              </h4>
               <a class="about__all" href="#">Все кейсы</a>
             </article>
           </li>
@@ -242,9 +248,9 @@
           <li class="about__item">
             <article class="about__card">
               <div class="about__num">88</div>
-              <div class="about__name">
+              <h4 class="about__name">
                 Выполнено заданий
-              </div>
+              </h4>
               <a class="about__all" href="#">Все кейсы</a>
             </article>
           </li>
@@ -252,9 +258,9 @@
           <li class="about__item">
             <article class="about__card">
               <div class="about__num">77</div>
-              <div class="about__name">
+              <h4 class="about__name">
                 Привлечено новых клиентов
-              </div>
+              </h4>
               <a class="about__all" href="#">Все кейсы</a>
             </article>
           </li>
@@ -263,7 +269,7 @@
     </div>
   </div>
 </section>
-<section class="clients">
+<section class="clients" id="clients">
   <div class="container">
     <ul class="clients__slider">
       <li class="clients__slide">
@@ -458,7 +464,8 @@
     </ul>
   </div>
 </section>
-<section class="contacts" style="background-image: url(images/contacts/contacts.png);">
+<section class="contacts" id="contacts"
+  style="background-image: url(images/contacts/contacts.png);">
   <div class="container">
     <div class="contacts__inner">
       <div class="contacts__content">
@@ -503,6 +510,12 @@
     </div>
   </div>
 </footer>
+<a class="scroll" id="scrollToTop" href="#header">
+  <span class="sr-only">Для поднятия к шапке сайта</span>
+  <svg>
+    <use xlink:href="images/sprite.svg#to-top-icon"></use>
+  </svg>
+</a>
 <script src="js/main.min.js"></script>
 </body>
 

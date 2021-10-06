@@ -4,13 +4,36 @@
   color: $white;
   @extend %bg-center-cover;
 
+  @include media-w($mdl) {
+    padding: 100px 0px 100px 0px;
+    min-height: 570px;
+  }
+
+  @include media-w($smx) {
+    padding: 80px 0px 80px 0px;
+    min-height: 470px;
+  }
+
+  @include media-w($xxs) {
+    padding: 60px 0 60px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include media-w($lg) {
+      flex-direction: column;
+    }
   }
 
   &__content {
     max-width: 445px;
+
+    @include media-w($lg) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   p {
@@ -25,12 +48,27 @@
     color: $white;
     line-height: 1.43;
     @include overflow($row);
+
+    @include media-w($mdl) {
+      font-size: 38px;
+      margin-bottom: 65px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 32px;
+      margin-bottom: 45px;
+    }
   }
 
   &__connections {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__tel,
@@ -73,6 +111,11 @@
   &__tel {
     padding-left: 25px;
 
+    @include media-w($lg) {
+      display: block;
+      margin-bottom: 30px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -102,6 +145,10 @@
     padding-top: 15px;
     width: 100%;
     max-width: 540px;
+
+    @include media-w($lg) {
+      max-width: 100%;
+    }
   }
 
   &__form-box {
@@ -109,6 +156,28 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
+
+    @include media-w($smx) {
+      flex-direction: column;
+    }
+  }
+
+  &__form-label {
+    @include media-w($lg) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form-label:first-child {
+    @include media-w($lg) {
+      margin-right: 30px;
+    }
+
+    @include media-w($smx) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__form-text {
@@ -129,6 +198,10 @@
     font-size: 21px;
     line-height: 1.38;
     color: $section-title;
+
+    @include media-w($lg) {
+      width: 100%;
+    }
   }
 
   &__form-textarea {
@@ -161,6 +234,14 @@
     color: $white;
     border: 2px solid transparent;
     transition: 0.5s;
+
+    @include media-w($smx) {
+      width: 100%;
+    }
+
+    @include media-w($xs) {
+      padding: 9px 20px;
+    }
 
     &:focus {
       border: 2px solid $title;

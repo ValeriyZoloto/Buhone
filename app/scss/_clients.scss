@@ -2,6 +2,10 @@
   padding: 100px 0 204px;
   background-color: $bg;
 
+  @include media-w($xxs) {
+    padding: 36px 0 145px;
+  }
+
   &__title {
     margin-bottom: 27px;
   }
@@ -14,11 +18,28 @@
   &__logo-list {
     display: flex;
     justify-content: center;
+
+    @include media-w($mdb) {
+      flex-wrap: wrap;
+    }
+
+    @include media-w($sms) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo-item {
+    @include media-w($mdb) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__logo-item:not(:last-child) {
     margin-right: 30px;
   }
+
 
   .slick-prev,
   .slick-next {

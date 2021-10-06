@@ -2,14 +2,39 @@
   padding: 163px 0px 140px 0px;
   background-color: $white;
 
+  @include media-w($mdl) {
+    padding: 127px 0 130px 0;
+  }
+
+  @include media-w($smx) {
+    padding: 117px 0 120px 0;
+  }
+
+  @include media-w($xs) {
+    padding: 97px 0 100px 0;
+  }
+
+  @include media-w($xxs) {
+    padding: 60px 0 70px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include media-w($mdb) {
+      flex-direction: column;
+    }
   }
 
   &__content {
     margin-top: -24px;
     max-width: 445px;
+
+    @include media-w($mdb) {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -27,6 +52,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+
+    @include media-w($sms) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
@@ -36,6 +65,10 @@
     background-color: $bg;
     cursor: pointer;
     transition: 0.5s;
+
+    @include media-w($mdb) {
+      width: 100%;
+    }
 
     &:hover {
       background-color: $accent;

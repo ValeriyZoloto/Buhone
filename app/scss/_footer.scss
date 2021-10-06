@@ -8,5 +8,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    @include media-w($xs) {
+      margin-bottom: 30px;
+    }
   }
 }

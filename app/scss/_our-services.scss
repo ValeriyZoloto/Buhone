@@ -1,6 +1,22 @@
 .our-services {
   padding: 137px 0 140px 0;
 
+  @include media-w($mdl) {
+    padding: 127px 0 130px 0;
+  }
+
+  @include media-w($smx) {
+    padding: 117px 0 120px 0;
+  }
+
+  @include media-w($xs) {
+    padding: 97px 0 100px 0;
+  }
+
+  @include media-w($xxs) {
+    padding: 60px 0 70px 0;
+  }
+
   &__title {
     margin-bottom: 29px;
     letter-spacing: 1px;
@@ -15,16 +31,33 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+
+    @include media-w($mdl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-w($sms) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
   }
 
   &__link {
     padding: 200px 45px 45px 45px;
     display: block;
-    width: 350px;
+    width: 100%;
     height: 360px;
     background-image: url(../images/our-services/our-services.jpg);
     @extend %bg-center-contain;
     transition: 0.5s;
+
+    @include media-w($smz) {
+      height: 300px;
+    }
+
+    @include media-w($sms) {
+      height: 350px;
+    }
 
 
     &:hover {
@@ -39,5 +72,24 @@
     font-size: 24px;
     line-height: 1.25;
     @include overflow(4);
+
+    @include media-w($md) {
+      font-size: 22px;
+    }
+
+    @include media-w($lg) {
+      max-width: 250px;
+      margin: -43px auto 20px;
+    }
+
+    @include media-w($smx) {
+      margin: -75px auto 20px;
+      font-size: 20px;
+      max-width: 230px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 19px;
+    }
   }
 }

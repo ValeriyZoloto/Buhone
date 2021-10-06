@@ -16,17 +16,23 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__inner">
       <div class="logo-box">
         <a class="logo" href="#">
           <picture>
             <source srcset="images/logo/logo.webp" type="image/webp">
             <source srcset="images/logo/logo.png" type="image/png">
-            <img src="images/logo/logo.png">
+            <img src="images/logo/logo.png" alt="logo">
           </picture>
         </a>
       </div>
+
+      <button class="burger" type="button">
+        <span class="burger__span"></span>
+        <span class="sr-only">Для открытия навигационного меню </span>
+      </button>
+
       <div class="header__content">
         <div class="header__top">
           <ul class="header__top-list">
@@ -51,25 +57,25 @@
         </div>
 
         <div class="header__botom">
-          <ul class="header__botom-list">
+          <ul class="header__botom-list menu">
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">Главная</a>
+              <a class="header__botom-link" href="#header">Главная</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">услуги</a>
+              <a class="header__botom-link" href="#our-services">услуги</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">кейсы</a>
+              <a class="header__botom-link" href="#about">кейсы</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">о компании</a>
+              <a class="header__botom-link" href="#about">о компании</a>
             </li>
 
             <li class="header__botom-item">
-              <a class="header__botom-link" href="#">контакты</a>
+              <a class="header__botom-link" href="#contacts">контакты</a>
             </li>
           </ul>
         </div>

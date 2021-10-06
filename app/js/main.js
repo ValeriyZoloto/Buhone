@@ -9,6 +9,15 @@ $(function () {
 
 		nextArrow:
 			'<button type="button" class="slick-next"><svg class="slick-arrow" width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z" fill="#fff"/></svg></button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: false,
+					autoplay: true,
+				},
+			},
+		],
 	});
 });
 
@@ -22,6 +31,15 @@ $(".clients__slider").slick({
 
 	nextArrow:
 		'<button type="button" class="slick-next"><svg class="slick-arrow" width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z" fill="#fff"/></svg></button>',
+	responsive: [
+		{
+			breakpoint: 1126,
+			settings: {
+				arrows: false,
+				autoplay: true,
+			},
+		},
+	],
 });
 
 $(".reviews__slider").slick({
@@ -34,4 +52,48 @@ $(".reviews__slider").slick({
 
 	nextArrow:
 		'<button type="button" class="slick-next"><svg class="slick-arrow" width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z" fill="#fff"/></svg></button>',
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				arrows: false,
+				autoplay: true,
+			},
+		},
+	],
+});
+
+//авто-закрытие мобильного меню
+$(".burger, .header__botom-link").on("click", function () {
+	$(".menu").toggleClass("menu--active"),
+		$(".burger").toggleClass("burger--active");
+});
+
+$(document).ready(function () {
+	$(".scroll").on("click", function (e) {
+		e.preventDefault();
+		const id = $(this).attr("href"),
+			top = $(id).offset().top;
+		$("body,html").animate({ scrollTop: top }, 1500);
+	});
+
+	var windowHeight = $(window).height();
+	console.log(windowHeight);
+
+	// Следим за скроллом, и показываем / скрываем кнопку
+	$(window).scroll(function () {
+		console.log($(this).scrollTop());
+		if ($(this).scrollTop() > windowHeight) {
+			$("#scrollToTop").fadeIn();
+		} else {
+			$("#scrollToTop").fadeOut();
+		}
+	});
+	// При клике на кнопку - делаем прокуртку наверх страницы
+
+	$("#scrollToTop").click(function (event) {
+		console.log(11111);
+		event.preventDefault();
+		$("html").animate({ scrollTop: 0 }, 800);
+	});
 });

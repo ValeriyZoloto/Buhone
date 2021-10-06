@@ -83,4 +83,107 @@ a {
   font-size: 48px;
   line-height: 1.43;
   color: $title;
+
+  @include media-w($mdl) {
+    font-size: 38px;
+  }
+
+  @include media-w($xxs) {
+    font-size: 28px;
+  }
+}
+
+.scroll {
+  position: fixed;
+  right: 36px;
+  bottom: 55px;
+  width: 55px;
+  height: 55px;
+  background-color: $section-title;
+  border-radius: 50px;
+  z-index: 2;
+  padding: 14px 9px 9px;
+  transition: background-color 0.5s;
+  border: none;
+  opacity: 0.4;
+
+  @include media-w($xs) {
+    padding: 12px 9px 9px;
+    width: 45px;
+    height: 45px;
+  }
+
+  svg {
+    width: 37px;
+    height: 23px;
+    fill: $white;
+
+    @include media-w($xs) {
+      width: 27px;
+      height: 19px;
+    }
+  }
+
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+.burger {
+  display: none;
+
+  @include media-w($mdl) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 15;
+    background-color: inherit;
+    border: none;
+
+    &__span {
+      width: 40px;
+      height: 5px;
+      background-color: $accent;
+      display: block;
+      position: relative;
+      transition: transform 0.5s ease-in;
+    }
+
+    &__span::before,
+    &__span::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 5px;
+      background-color: $accent;
+      left: 0;
+      transition: transform 0.5s ease-in;
+    }
+
+    &__span::before {
+      top: 10px;
+    }
+
+    &__span::after {
+      bottom: 10px;
+    }
+  }
+}
+
+.burger--active .burger__span {
+  background-color: transparent;
+}
+
+.burger--active .burger__span::before {
+  background-color: $white;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.burger--active .burger__span::after {
+  background-color: $white;
+  transform: rotate(-45deg);
+  bottom: 0;
 }

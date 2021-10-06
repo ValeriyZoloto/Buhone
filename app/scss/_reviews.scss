@@ -2,6 +2,23 @@
   background-color: $white;
   padding: 140px 0 250px 0;
 
+  @include media-w($mdl) {
+    padding: 120px 0 210px 0;
+  }
+
+  @include media-w($smx) {
+    padding: 100px 0 190px 0;
+  }
+
+  @include media-w($xs) {
+    padding: 80px 0 170px 0;
+  }
+
+  @include media-w($xxs) {
+    padding: 60px 0 150px 0;
+  }
+
+
   &__title {
     margin-bottom: 27px;
     letter-spacing: 1px;
@@ -15,11 +32,33 @@
   &__post {
     padding: 45px 95px 40px 95px;
     background-color: $bg;
+
+    @include media-w($sm) {
+      padding: 45px 50px 40px 50px
+    }
+
+    @include media-w($smx) {
+      padding: 45px 30px 40px 30px;
+      font-size: 16px;
+    }
+
+    @include media-w($sms) {
+      padding: 45px 10px 40px 10px;
+      font-size: 14px;
+    }
   }
 
   &__text {
     margin-bottom: 53px;
     @include overflow($row-5);
+
+    @include media-w($smx) {
+      @include overflow($row-6);
+    }
+
+    @include media-w($smm) {
+      @include overflow($row-10);
+    }
   }
 
   &__author {
