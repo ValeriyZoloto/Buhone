@@ -107,7 +107,6 @@
     line-height: 1.2;
     color: $accent;
     border-bottom: 1px solid $accent;
-    @include overflow($row);
   }
 
   p {
