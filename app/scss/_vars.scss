@@ -5,7 +5,6 @@ $title:#333333;
 $white: #ffffff;
 $bg:#ebebeb;
 $section-title: #bdbdbd;
-// $blue: #34c3ff;
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
 $row: 1;
@@ -29,11 +28,6 @@ $row-10:10;
 
 /*::::::::::::::::::::::::::mixins-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::обои::::::::::::::::::::::::::::::::::::::::::::::::*/
-// %bg-left {
-//   background-position: left center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-// }
 
 %bg-center-cover {
   background-position: center;
@@ -105,48 +99,3 @@ $xxs: 375px;
 }
 
 /*::::::::::::::::::::::::::наследование для шрифтов-finish:::::::::::::::::::::*/
-/*::::::::::::::::::::::::::наследование для кнопки:::::::::::::::::::::::::::::*/
-// %btn {
-//   padding: 12px 26px;
-//   background-color: $accent;
-//   color: $white;
-//   text-transform: uppercase;
-//   @extend %roboto-400;
-//   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-// }
-
-// %btn-hover {
-//   background-color: #fff;
-//   color: #29282d;
-//   border: 1px solid #fe3e57;
-//   box-shadow: 20px 7px 20px 0px rgba(255, 17, 48, 0.3);
-// }
-
-// %checkbox-hiden {
-//   width: 1px;
-//   height: 1px;
-//   overflow: hidden;
-//   clip: rect(0 0 0 0);
-//   position: absolute;
-// }
-
-// %radio-hidden {
-//   width: 1px;
-//   height: 1px;
-//   overflow: hidden;
-//   clip: rect(0 0 0 0);
-//   position: absolute;
-// }
-
-/*::::::::::::::::::::::::::наследование для кнопки-finish::::::::::::::::::::::*/
-/*::::::::::::::::::::::::::fancybox-snipet:::::::::::::::::::::::::::::::::::::*/
-
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-}
-
-/*::::::::::::::::::::::::::fancybox-snipet-finish::::::::::::::::::::::::::::*/

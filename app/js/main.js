@@ -89,6 +89,14 @@ $(document).ready(function () {
 			$("#scrollToTop").fadeOut();
 		}
 	});
+
+	$(".menu a, header a").on("click", function (e) {
+		e.preventDefault();
+		const id = $(this).attr("href"),
+			top = $(id).offset().top;
+		$("body,html").animate({ scrollTop: top }, 1500);
+	});
+
 	// При клике на кнопку - делаем прокуртку наверх страницы
 
 	$("#scrollToTop").click(function (event) {

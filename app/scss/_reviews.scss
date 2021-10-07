@@ -18,6 +18,9 @@
     padding: 60px 0 150px 0;
   }
 
+  &__avatar {
+    object-fit: contain;
+  }
 
   &__title {
     margin-bottom: 27px;
@@ -27,6 +30,7 @@
   &__subtitle {
     display: block;
     margin-bottom: 63px;
+    @include overflow($row);
   }
 
   &__post {

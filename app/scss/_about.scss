@@ -100,12 +100,14 @@
   }
 
   &__all {
-    display: inline-block;
+    display: block;
+    max-width: 70px;
     @extend %lato-700;
     font-size: 14px;
     line-height: 1.2;
     color: $accent;
     border-bottom: 1px solid $accent;
+    @include overflow($row);
   }
 
   p {

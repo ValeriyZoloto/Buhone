@@ -187,6 +187,7 @@
     @extend %lato-400;
     font-size: 16px;
     line-height: 1.37;
+    @include overflow($row);
   }
 
   &__form-input {

@@ -41,6 +41,7 @@
     @extend %Merriweather-700;
     font-size: 48px;
     line-height: 1.37;
+    @include overflow($row-3);
 
     @include media-w($mdl) {
       font-size: 38px;
